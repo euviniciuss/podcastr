@@ -104,6 +104,17 @@
     background: transparent;
     border: 0;
     font-size: 0;
+
+    transition: filter 0.2s;
+
+    &:disabled {
+      cursor: default;
+    }
+
+    &:hover:not(:disabled) {
+      filter: brightness(0.8);
+    }
+
   }
 
   .playButton {
@@ -111,11 +122,23 @@
     height: 4rem;
     border-radius: 1rem;
     background: var(--purple-400);
+
+    &:hover:not(:disabled) {
+      filter: brightness(0.95);
+    }
   }
 }
 
 
 @media (max-width: 1370px) {
+  .progress {
+    margin-top: 0.5rem;
+  }
+
+  .buttons {
+    margin-top: 1.7rem;
+  }
+
   .currentEpisode {
     margin-top: 1rem;
 
